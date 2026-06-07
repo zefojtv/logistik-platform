@@ -1,0 +1,288 @@
+:root {
+  color: #172033;
+  background: #f4f7fb;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+
+button, input, select { font: inherit; }
+
+.topbar {
+  align-items: center;
+  backdrop-filter: blur(18px);
+  background: rgba(244, 247, 251, 0.86);
+  border-bottom: 1px solid rgba(23, 32, 51, 0.08);
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 18px clamp(20px, 4vw, 64px);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.brand, .brandMark, .navLinks, .heroActions, .trustRow, .eyebrow, .primaryButton, .secondaryButton {
+  align-items: center;
+  display: flex;
+}
+
+.brand {
+  font-size: 1.05rem;
+  font-weight: 800;
+  gap: 10px;
+}
+
+.brandMark {
+  background: #102a43;
+  border-radius: 14px;
+  color: #ffffff;
+  height: 42px;
+  justify-content: center;
+  width: 42px;
+}
+
+.navLinks {
+  gap: 26px;
+  color: #526070;
+  font-weight: 650;
+}
+
+.navLinks a:hover { color: #102a43; }
+
+.menuButton {
+  background: #ffffff;
+  border: 1px solid rgba(23, 32, 51, 0.12);
+  border-radius: 12px;
+  display: none;
+  padding: 10px;
+}
+
+.hero {
+  display: grid;
+  gap: clamp(32px, 5vw, 78px);
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.75fr);
+  overflow: hidden;
+  padding: clamp(56px, 8vw, 108px) clamp(20px, 4vw, 64px) 64px;
+  position: relative;
+}
+
+.hero::before {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.18), transparent 62%);
+  content: "";
+  height: 520px;
+  position: absolute;
+  right: -160px;
+  top: -150px;
+  width: 520px;
+  z-index: -1;
+}
+
+.eyebrow {
+  color: #cc6b00;
+  font-size: 0.83rem;
+  font-weight: 800;
+  gap: 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1, h2, h3, p { margin-top: 0; }
+
+h1 {
+  color: #102a43;
+  font-size: clamp(2.7rem, 6vw, 5.8rem);
+  letter-spacing: -0.07em;
+  line-height: 0.96;
+  margin-bottom: 24px;
+  max-width: 980px;
+}
+
+h2 {
+  color: #102a43;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+h3 { color: #102a43; margin-bottom: 10px; }
+
+.heroLead, .sectionHeader p, .quoteSection p, .split p, .securitySection p {
+  color: #526070;
+  font-size: 1.08rem;
+  max-width: 760px;
+}
+
+.heroActions { flex-wrap: wrap; gap: 14px; margin: 32px 0 24px; }
+
+.primaryButton, .secondaryButton, .quoteForm button {
+  border-radius: 999px;
+  font-weight: 800;
+  gap: 8px;
+  justify-content: center;
+  padding: 14px 22px;
+}
+
+.primaryButton, .quoteForm button {
+  background: #f59e0b;
+  border: 1px solid #f59e0b;
+  color: #102a43;
+  box-shadow: 0 18px 42px rgba(245, 158, 11, 0.28);
+}
+
+.secondaryButton {
+  background: #ffffff;
+  border: 1px solid rgba(23, 32, 51, 0.12);
+  color: #102a43;
+}
+
+.trustRow { color: #526070; flex-wrap: wrap; gap: 14px; font-weight: 700; }
+.trustRow span { align-items: center; display: flex; gap: 7px; }
+
+.heroPanel, .quoteForm, .fleetBoard {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  border-radius: 34px;
+  box-shadow: 0 24px 80px rgba(16, 42, 67, 0.12);
+}
+
+.heroPanel { padding: 24px; }
+.panelHeader { align-items: center; display: flex; justify-content: space-between; margin-bottom: 18px; }
+.panelHeader span, .routeCard span, .fleetCard span, .fleetCard small { color: #6b7280; }
+.panelHeader strong { color: #0f766e; }
+
+.routeCard {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  display: grid;
+  gap: 4px;
+  margin-bottom: 12px;
+  padding: 18px;
+}
+
+.routeCard.active { background: #102a43; color: #ffffff; }
+.routeCard.active strong, .routeCard.active small, .routeCard.active span { color: #ffffff; }
+
+.metricGrid { display: grid; gap: 12px; grid-template-columns: repeat(3, 1fr); margin-top: 18px; }
+.metricGrid div { background: #fff7ed; border-radius: 20px; padding: 14px; }
+.metricGrid strong { color: #cc6b00; display: block; font-size: 1.7rem; }
+.metricGrid span { color: #526070; font-size: 0.82rem; }
+
+.section, .quoteSection, .securitySection, .roadmap { padding: 72px clamp(20px, 4vw, 64px); }
+.sectionHeader { margin-bottom: 34px; }
+
+.roleGrid { display: grid; gap: 18px; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.roleCard {
+  background: #ffffff;
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  border-radius: 28px;
+  padding: 24px;
+}
+.cardIcon { display: inline-block; font-size: 1.8rem; margin-bottom: 12px; }
+.roleCard p { color: #526070; margin-bottom: 0; }
+
+.quoteSection {
+  background: #102a43;
+  color: #ffffff;
+  display: grid;
+  gap: 34px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.7fr);
+}
+.quoteSection h2, .quoteSection .eyebrow { color: #ffffff; }
+.quoteSection p { color: #d6e2ee; }
+.quoteSection .primaryButton { display: inline-flex; margin-top: 12px; }
+
+.quoteForm { color: #172033; display: grid; gap: 14px; padding: 24px; }
+.quoteForm label { color: #526070; display: grid; font-size: 0.88rem; font-weight: 750; gap: 6px; }
+.quoteForm input, .quoteForm select {
+  background: #f8fafc;
+  border: 1px solid #dbe2ea;
+  border-radius: 14px;
+  color: #102a43;
+  padding: 12px 14px;
+}
+.quoteForm button { border-radius: 16px; cursor: pointer; width: 100%; }
+
+.split { align-items: center; display: grid; gap: 34px; grid-template-columns: 0.8fr 1fr; }
+.fleetBoard { display: grid; gap: 14px; padding: 20px; }
+.fleetCard {
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr auto auto auto;
+  padding: 16px;
+}
+.fleetCard strong { color: #102a43; display: block; }
+.status { background: #dcfce7; border-radius: 999px; color: #166534 !important; font-weight: 800; padding: 6px 12px; }
+.status.warning { background: #fef3c7; color: #92400e !important; }
+
+.securitySection { background: #eaf1f8; }
+.securityGrid { display: grid; gap: 14px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.securityItem {
+  align-items: flex-start;
+  background: #ffffff;
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  border-radius: 22px;
+  color: #526070;
+  display: flex;
+  font-weight: 700;
+  gap: 12px;
+  padding: 18px;
+}
+.securityItem svg { color: #0f766e; flex-shrink: 0; }
+
+.roadmapGrid { display: grid; gap: 14px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.roadmapGrid span {
+  align-items: center;
+  background: #102a43;
+  border-radius: 18px;
+  color: #ffffff;
+  display: flex;
+  font-weight: 800;
+  gap: 10px;
+  padding: 18px;
+}
+
+@media (max-width: 1050px) {
+  .hero, .quoteSection, .split { grid-template-columns: 1fr; }
+  .roleGrid, .securityGrid, .roadmapGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 720px) {
+  .navLinks {
+    background: #ffffff;
+    border: 1px solid rgba(23, 32, 51, 0.08);
+    border-radius: 18px;
+    display: none;
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px;
+    position: absolute;
+    right: 18px;
+    top: 74px;
+  }
+  .navLinks.is-open { display: flex; }
+  .menuButton { display: inline-flex; }
+  .hero, .section, .quoteSection, .securitySection, .roadmap { padding-left: 18px; padding-right: 18px; }
+  h1 { font-size: 3rem; }
+  .roleGrid, .securityGrid, .roadmapGrid, .metricGrid { grid-template-columns: 1fr; }
+  .fleetCard { grid-template-columns: 1fr; }
+}

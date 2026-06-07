@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Logistikplatform til transportvirksomheder med tilbud, flådestyring, værkstedsportal, chaufførapp og rollebaserede dashboards."
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <title>Logistik OS | Transportplatform</title>
+  </head>
+  <body>
+    <main>
+      <nav class="topbar" aria-label="Primær navigation">
+        <a class="brand" href="#top" aria-label="Logistik OS forside">
+          <span class="brandMark" aria-hidden="true">🚚</span>
+          Logistik OS
+        </a>
+        <div class="navLinks" data-nav-links>
+          <a href="#platform">Platform</a>
+          <a href="#tilbud">Tilbud</a>
+          <a href="#flaade">Flåde</a>
+          <a href="#sikkerhed">Sikkerhed</a>
+        </div>
+        <button class="menuButton" data-menu-button aria-label="Åbn menu" aria-expanded="false">☰</button>
+      </nav>
+
+      <section id="top" class="hero">
+        <div class="heroContent">
+          <p class="eyebrow">✅ Dansk logistikplatform for transportvirksomheder</p>
+          <h1>Opret tilbud, planlæg ture og styr hele flåden fra én sikker platform.</h1>
+          <p class="heroLead">
+            Et komplet driftssystem til vognmænd, disponenter, chauffører, ledelse, support og værksteder.
+            Platformen samler tilbud, ruteplanlægning, køretøjer, service, kundedata og mobil arbejdsgang.
+          </p>
+          <div class="heroActions">
+            <a class="primaryButton" href="#tilbud">Opret tilbud <span aria-hidden="true">→</span></a>
+            <a class="secondaryButton" href="#platform">Se platformen</a>
+          </div>
+          <div class="trustRow" aria-label="Platformens hovedmoduler">
+            <span>📄 Tilbud via mail</span>
+            <span>🚛 Flådestyring</span>
+            <span>🔧 Værkstedsflow</span>
+          </div>
+        </div>
+
+        <aside class="heroPanel" aria-label="Driftsoverblik">
+          <div class="panelHeader">
+            <span>Live drift</span>
+            <strong>92% kapacitet</strong>
+          </div>
+          <div class="routeCard active">
+            <span>Tur #4812</span>
+            <strong>Aarhus → København</strong>
+            <small>Chauffør bekræftet · ETA 14:20</small>
+          </div>
+          <div class="routeCard">
+            <span>Værksted</span>
+            <strong>K-19 kræver service</strong>
+            <small>Automatisk varsel sendt til værksted</small>
+          </div>
+          <div class="metricGrid">
+            <div><strong>38</strong><span>Aktive ture</span></div>
+            <div><strong>14</strong><span>Tilbud åbne</span></div>
+            <div><strong>5</strong><span>Køretøjer snart service</span></div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="platform" class="section">
+        <div class="sectionHeader">
+          <p class="eyebrow">👥 Rollebaserede platforme</p>
+          <h2>Alle brugere får den arbejdsgang, de har brug for.</h2>
+          <p>Systemet kan sælges som abonnement til transportvirksomheder og udvides modulvist pr. firma, afdeling og rolle.</p>
+        </div>
+        <div class="roleGrid">
+          <article class="roleCard">
+            <span class="cardIcon" aria-hidden="true">🎧</span>
+            <h3>Administrator &amp; support</h3>
+            <p>Global platformstyring, onboarding af kunder, rettighedsroller, audits og supportoverblik.</p>
+          </article>
+          <article class="roleCard">
+            <span class="cardIcon" aria-hidden="true">🏭</span>
+            <h3>Ledelsesplatform</h3>
+            <p>KPI’er, dækningsbidrag, tilbudsflow, værkstedsudgifter og flådeudnyttelse pr. afdeling.</p>
+          </article>
+          <article class="roleCard">
+            <span class="cardIcon" aria-hidden="true">🗺️</span>
+            <h3>Disponentplatform</h3>
+            <p>Opret ture, planlæg ruter, tildel chauffører, følg status og håndter afvigelser i realtid.</p>
+          </article>
+          <article class="roleCard">
+            <span class="cardIcon" aria-hidden="true">📱</span>
+            <h3>Chaufførplatform</h3>
+            <p>Android-venlig appvisning med dagens ture, dokumenter, skader, beskeder og tjeklister.</p>
+          </article>
+          <article class="roleCard">
+            <span class="cardIcon" aria-hidden="true">🔧</span>
+            <h3>Værkstedsportal</h3>
+            <p>Værksteder ser deres kunders køretøjer, vognnumre, servicefrister, historik og opgaver.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="tilbud" class="quoteSection">
+        <div>
+          <p class="eyebrow">✉️ Primær funktion</p>
+          <h2>Tilbudsmotor der kan sende professionelle tilbud direkte på mail.</h2>
+          <p>
+            Opret kunde, afhentning, levering, godstype, prislinjer, gyldighed og noter. Tilbuddet kan senere
+            konverteres til tur, fakturagrundlag og chaufføropgave.
+          </p>
+          <a class="primaryButton" data-quote-mail href="mailto:salg@logistik-os.dk">
+            Send testforespørgsel <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <form class="quoteForm" aria-label="Eksempel på tilbudsformular">
+          <label>Kunde<input value="Nordic Retail A/S" readonly /></label>
+          <label>Afhentning<input value="Odense C" readonly /></label>
+          <label>Levering<input value="Aalborg Ø" readonly /></label>
+          <label>Køretøjstype<select aria-label="Køretøjstype"><option>Forvogn</option><option>Pakkebil</option><option>Kærre</option><option>Trækker</option><option>Trailer</option></select></label>
+          <label>Prisforslag<input value="8.450 kr." readonly /></label>
+          <button type="button">Gem og send tilbud</button>
+        </form>
+      </section>
+
+      <section id="flaade" class="section split">
+        <div>
+          <p class="eyebrow">🚐 Flåde og værksted</p>
+          <h2>Overblik over alle køretøjer, servicefrister og værkstedskunder.</h2>
+          <p>
+            Værksteder kan se de virksomheder, de servicerer, med vognnummer, køretøjstype, dokumenter,
+            skadeshistorik, serviceaftaler og planlagte tider.
+          </p>
+        </div>
+        <div class="fleetBoard">
+          <article class="fleetCard">
+            <div><strong>V-102</strong><span>Forvogn</span></div>
+            <span class="status">Klar</span>
+            <small>312.440 km</small>
+            <small>Service: 18 dage</small>
+          </article>
+          <article class="fleetCard">
+            <div><strong>TR-44</strong><span>Trækker</span></div>
+            <span class="status">På tur</span>
+            <small>650.112 km</small>
+            <small>Service: 7 dage</small>
+          </article>
+          <article class="fleetCard">
+            <div><strong>K-19</strong><span>Kærre</span></div>
+            <span class="status warning">Service</span>
+            <small>88.120 km</small>
+            <small>Service: I dag</small>
+          </article>
+        </div>
+      </section>
+
+      <section id="sikkerhed" class="securitySection">
+        <div class="sectionHeader">
+          <p class="eyebrow">🛡️ Sikkerhed først</p>
+          <h2>Designet til stærk sikkerhed, compliance og adskilte kundemiljøer.</h2>
+          <p>
+            Ingen platform kan garantere at være “umulig at hacke”, men arkitekturen bør bygges med defence-in-depth,
+            løbende tests og kontroller, der reducerer risikoen markant.
+          </p>
+        </div>
+        <div class="securityGrid">
+          <div class="securityItem">🔐 Zero-trust rettigheder med rollebaseret adgang og virksomhedsadskillelse</div>
+          <div class="securityItem">🔐 MFA, sessionsstyring, adgangslog, revisionsspor og stærk passwordpolitik</div>
+          <div class="securityItem">🔐 Kryptering af data i transit og i hvile samt sikker filhåndtering</div>
+          <div class="securityItem">🔐 Automatiserede backups, beredskabsplan og løbende sårbarhedsscanning</div>
+        </div>
+      </section>
+
+      <section class="roadmap">
+        <h2>Foreslåede næste moduler</h2>
+        <div class="roadmapGrid">
+          <span>📋 Digital CMR og dokumentarkiv</span>
+          <span>📅 Servicekalender og booking</span>
+          <span>📱 Android app med offline tjeklister</span>
+          <span>🛡️ Sikkerhedscenter og auditrapporter</span>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
